@@ -14,6 +14,9 @@ scrape_configs:
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['cadvisor:8080']
+  - job_name: 'nvidia_gpu'
+    static_configs:
+      - targets: ['nvidia-gpu-exporter:9835']
 
   # Add your Ollama service if you want to monitor it
   # - job_name: 'ollama'
